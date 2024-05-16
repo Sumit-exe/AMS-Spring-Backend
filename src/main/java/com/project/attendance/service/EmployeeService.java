@@ -4,6 +4,8 @@ package com.project.attendance.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.project.attendance.model.Employee;
 
 public interface EmployeeService {
@@ -12,7 +14,7 @@ public interface EmployeeService {
 
 	public abstract Employee getEmployeeById(String employeeId);
 
-	public abstract List<Employee> getEmployeeByFirstName(String employeeName);
+	public abstract List<Employee> getEmployeeByFullName(String employeeName);
 
 	public abstract Employee addEmployee(Employee employee);
 
@@ -25,6 +27,4 @@ public interface EmployeeService {
 	public abstract List<Employee> getEmployeesByTeamId(String employeeTeamId);
 
 	public abstract List<Employee> getEmployeesByTeamName(String employeeTeamName);
-	
-//	public abstract List<Employee> getEmployeesByTeamName(String employeeTeamName);
 }
