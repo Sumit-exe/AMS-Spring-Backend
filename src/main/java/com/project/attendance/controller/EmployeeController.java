@@ -63,7 +63,6 @@ public class EmployeeController {
 	public ResponseEntity<Employee> updateEmp(@PathVariable(name = "eid") String employeeId,@RequestBody Employee employee) {
 		Employee existingEmployee = employeeService.getEmployeeById(employeeId);
 		existingEmployee.setEmployeeFullName(employee.getEmployeeFullName());
-
 		existingEmployee.setEmployeeEmail(employee.getEmployeeEmail());
 		existingEmployee.setEmployeePhoneNo(employee.getEmployeePhoneNo());
 		existingEmployee.setEmployeeAadhar(employee.getEmployeeAadhar());
