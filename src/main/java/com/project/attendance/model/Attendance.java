@@ -1,6 +1,7 @@
 package com.project.attendance.model;
 
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
@@ -8,9 +9,13 @@ import java.util.List;
 @Document(collection = "attendances")
 public class Attendance {
     
-    private String id;
+	@Id
+	private String allId;
     private String empId;
+    private String counted;
     private List<WorkDetails> workDetails;
+    
+
     
     
 		
@@ -19,12 +24,6 @@ public class Attendance {
 	public Attendance() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
 	}
 	public String getEmpId() {
 		return empId;
@@ -38,11 +37,15 @@ public class Attendance {
 	public void setWorkDetails(List<WorkDetails> workDetails) {
 		this.workDetails = workDetails;
 	}
+	public String getCounted() {
+		return counted;
+	}
+	public void setCounted(String counted) {
+		this.counted = counted;
+	}
 
-    @Override
-	public String toString() {
-		return "Attendance [id=" + id + ", empId=" + empId + ", workDetails=" + workDetails + "]";
+	
+
     
-}
 
 }

@@ -17,7 +17,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.project.attendance.model.Attendance;
+import com.project.attendance.model.Employee;
+import com.project.attendance.model.WorkDetails;
 import com.project.attendance.service.AttendanceService;
+
 @RestController
 @RequestMapping("att")
 @CrossOrigin("*")
@@ -44,4 +47,40 @@ public class AttendanceController {
 		ResponseEntity<Attendance> response = new ResponseEntity<Attendance>(attendance, headers, status);
 		return response;
 		}
+	
+  
+//    @GetMapping(path = "get-all-dates", produces = "application/json")
+//	public ResponseEntity<List<WorkDetails>> getAllEmployeesByDates() {
+//		List<WorkDetails> attList = attendanceService.getAllEmployeesByDates();
+//		HttpStatus status = HttpStatus.OK;
+//		HttpHeaders headers = new HttpHeaders();
+//		headers.add("message", "All attendances data fetched successfully!");
+//		ResponseEntity<List<WorkDetails>> response = new ResponseEntity<List<WorkDetails>>(attList, headers, status);
+//		return response;
+//		
+//    }		
+//		
+	@PostMapping(path = "add-att", produces = "application/json", consumes = "application/json")
+	public ResponseEntity<Attendance> addAtt(@RequestBody Attendance attendance){
+		Attendance attToBeAdded = attendanceService.addAttendance(attendance);
+		HttpHeaders headers = new HttpHeaders();
+		ResponseEntity<Attendance> response = new ResponseEntity<Attendance>(attToBeAdded, headers,  HttpStatus.CREATED);
+		return response;
+	}
+	
+	@PutMapping(path = "update-att/{eid}", produces = "application/json", consumes = "application/json")
+	public ResponseEntity<Attendance> updateAtt(@PathVariable(name = "eid") String employeeId,@RequestBody Attendance attendance) {
+		Attendance existingAttendance = attendanceService.getEmployeeAttendanceById(employeeId);
+		existingAttendance.setEmpId(attendance.getEmpId());
+		existingAttendance.setCounted(attendance.getCounted());
+		existingAttendance.setWorkDetails(attendance.getWorkDetails());
+		Attendance updatedAttendance = attendanceService.updateAttendance(existingAttendance);
+		HttpStatus status = HttpStatus.OK;
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("message", "Employee updated successfully!");
+		ResponseEntity<Attendance> response = new ResponseEntity<Attendance>(updatedAttendance, headers, status);
+		return response;
+	}
+    
+    
 }
