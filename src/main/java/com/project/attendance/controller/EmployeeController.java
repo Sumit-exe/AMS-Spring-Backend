@@ -62,6 +62,7 @@ public class EmployeeController {
 	@PutMapping(path = "update-emp/{eid}", produces = "application/json", consumes = "application/json")
 	public ResponseEntity<Employee> updateEmp(@PathVariable(name = "eid") String employeeId,@RequestBody Employee employee) {
 		Employee existingEmployee = employeeService.getEmployeeById(employeeId);
+		existingEmployee.setId(employee.getId());
 		existingEmployee.setEmployeeFullName(employee.getEmployeeFullName());
 		existingEmployee.setEmployeeEmail(employee.getEmployeeEmail());
 		existingEmployee.setEmployeePhoneNo(employee.getEmployeePhoneNo());
@@ -91,7 +92,7 @@ public class EmployeeController {
 		headers.add("message", "Employee added successfully!");
 		ResponseEntity<Employee> response = new ResponseEntity<Employee>(employeeToBeDeleted, headers, status);
 		return response;
-	}
+	} 
 	
 	@GetMapping("get-emp-by-managerId/{eid}")
 	public ResponseEntity<List<Employee>> getEmpByManagerId(@PathVariable(name = "eid") String employeeManagerId) {
