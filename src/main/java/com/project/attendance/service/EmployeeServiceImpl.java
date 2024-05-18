@@ -28,7 +28,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
     @Override
     public Employee getEmployeeById(String employeeId) {
-        Optional<Employee> empOptional = employeeRepository.findById(employeeId);
+        Optional<Employee> empOptional = employeeRepository.findByEmployeeId(employeeId);
         if (empOptional.isEmpty()) {
             String errorMessage = "Employee with the id " + employeeId + " is not found!";
             LOG.warn(errorMessage);
@@ -63,7 +63,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee deleteEmployee(String employeeId) {
         LOG.info(employeeId);
         Employee employeeToBeDeleted = this.getEmployeeById(employeeId);
-        employeeRepository.deleteById(employeeId);
+        employeeRepository.deleteByEmployeeId(employeeId);
         return employeeToBeDeleted;
     }
     @Override

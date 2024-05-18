@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "66489191c122f043216ede1a"
+  },
+  "employeeId": "EMP002",
+  "workDetails": [
+    {
+      "date": "16-may-23",
+      "workingWay": "Office",
+      "logginTime": "9:00 am",
+      "logoutTime": "5:00 pm",
+      "workHours": "8"
+    },
+    {
+      "date": "17-may-23",
+      "workingWay": "Office",
+      "logginTime": "9:00 am",
+      "logoutTime": "5:00 pm",
+      "workHours": "8"
+    },
+    {
+      "date": "18-may-23",
+      "workingWay": "Home",
+      "logginTime": "9:00 am",
+      "logoutTime": "5:00 pm",
+      "workHours": "8"
+    }
+  ],
+  "_class": "com.project.attendance.model.Attendance"
+},
+{
+  "_id": {
+    "$oid": "664891a4c122f043216ede1b"
+  },
+  "employeeId": "EMP003",
+  "workDetails": [
+    {
+      "date": "16-may-23",
+      "workingWay": "Office",
+      "logginTime": "9:00 am",
+      "logoutTime": "5:00 pm",
+      "workHours": "8"
+    },
+    {
+      "date": "17-may-23",
+      "workingWay": "Office",
+      "logginTime": "9:00 am",
+      "logoutTime": "5:00 pm",
+      "workHours": "8"
+    },
+    {
+      "date": "18-may-23",
+      "workingWay": "Home",
+      "logginTime": "9:00 am",
+      "logoutTime": "5:00 pm",
+      "workHours": "8"
+    }
+  ],
+  "_class": "com.project.attendance.model.Attendance"
+}]

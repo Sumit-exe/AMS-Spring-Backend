@@ -63,7 +63,6 @@ public class EmployeeController {
 	public ResponseEntity<Employee> updateEmp(@PathVariable(name = "eid") String employeeId,@RequestBody Employee employee) {
 		Employee existingEmployee = employeeService.getEmployeeById(employeeId);
 		existingEmployee.setEmployeeFullName(employee.getEmployeeFullName());
-
 		existingEmployee.setEmployeeEmail(employee.getEmployeeEmail());
 		existingEmployee.setEmployeePhoneNo(employee.getEmployeePhoneNo());
 		existingEmployee.setEmployeeAadhar(employee.getEmployeeAadhar());
@@ -82,6 +81,8 @@ public class EmployeeController {
 		ResponseEntity<Employee> response = new ResponseEntity<Employee>(updatedEmployee, headers, status);
 		return response;
 	}
+	
+	
 	@DeleteMapping("delete-emp/{eid}")
 	public ResponseEntity<Employee> deleteEmp(@PathVariable(name = "eid") String employeeId) {
 		Employee employeeToBeDeleted = employeeService.deleteEmployee(employeeId);
@@ -92,7 +93,7 @@ public class EmployeeController {
 		return response;
 	}
 	
-	@GetMapping("get-emp-by-mangId/{eid}")
+	@GetMapping("get-emp-by-managerId/{eid}")
 	public ResponseEntity<List<Employee>> getEmpByManagerId(@PathVariable(name = "eid") String employeeManagerId) {
 		List<Employee> empList = employeeService.getEmployeesByManagerId(employeeManagerId);
 		HttpStatus status = HttpStatus.OK;
