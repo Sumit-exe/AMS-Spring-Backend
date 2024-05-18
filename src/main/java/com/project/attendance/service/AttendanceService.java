@@ -10,7 +10,7 @@ public interface AttendanceService {
 
     public abstract List<Attendance> getAllEmployeeAttendance();
     
-    public abstract Attendance getEmployeeAttendanceById(String employeeId);
+    public abstract Attendance getEmployeeAttendanceById(String attendanceId);
     
 //    public abstract List<WorkDetails> getAllEmployeesByDates();
     

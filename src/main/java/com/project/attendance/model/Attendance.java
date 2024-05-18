@@ -10,14 +10,8 @@ import java.util.List;
 public class Attendance {
     
 	@Id
-<<<<<<< HEAD
 	private String allId;
     private String employeeId;
-=======
-	private String Id;
-    private String employeeId;
-    private String counted;
->>>>>>> 9df2e4db3c60c4ca8bd599f36c253d7be0f961fd
     private List<WorkDetails> workDetails;
     
 
@@ -26,13 +20,6 @@ public class Attendance {
 		
 
 	
-	
-	public String getId() {
-		return Id;
-	}
-	public void setId(String id) {
-		Id = id;
-	}
 	public Attendance() {
 		super();
 		// TODO Auto-generated constructor stub
