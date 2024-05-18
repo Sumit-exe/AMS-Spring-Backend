@@ -6,7 +6,16 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Employee {
 		
 		@Id
+		private String Id;
+		
 		private String employeeId;
+		public String getId() {
+			return Id;
+		}
+
+		public void setId(String id) {
+			Id = id;
+		}
 		private String employeeFullName;
 		private String employeeEmail;
 		private String employeePhoneNo;

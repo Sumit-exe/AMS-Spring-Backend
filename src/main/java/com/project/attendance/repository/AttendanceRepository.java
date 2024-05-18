@@ -15,7 +15,8 @@ import com.project.attendance.model.WorkDetails;
 	@Repository
 	public interface AttendanceRepository extends MongoRepository<Attendance, String> {
 //		public abstract WorkDetails findByWorkDetailsDate();
-		public abstract Optional<Attendance> findByEmpId(String empId);
+		public abstract Optional<Attendance> findByEmployeeId(String employeeId);
+		public abstract Optional<Attendance> deleteByEmployeeId(String employeeId);
 		
 
 

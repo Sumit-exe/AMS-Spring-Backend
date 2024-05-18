@@ -71,7 +71,8 @@ public class AttendanceController {
 	@PutMapping(path = "update-att/{eid}", produces = "application/json", consumes = "application/json")
 	public ResponseEntity<Attendance> updateAtt(@PathVariable(name = "eid") String employeeId,@RequestBody Attendance attendance) {
 		Attendance existingAttendance = attendanceService.getEmployeeAttendanceById(employeeId);
-		existingAttendance.setEmpId(attendance.getEmpId());
+		existingAttendance.setId(attendance.getId());
+		existingAttendance.setEmployeeId(attendance.getEmployeeId());
 		existingAttendance.setCounted(attendance.getCounted());
 		existingAttendance.setWorkDetails(attendance.getWorkDetails());
 		Attendance updatedAttendance = attendanceService.updateAttendance(existingAttendance);
@@ -82,5 +83,14 @@ public class AttendanceController {
 		return response;
 	}
     
+	@DeleteMapping("delete-att/{eid}")
+	public ResponseEntity<Attendance> deleteAtt(@PathVariable(name = "eid") String employeeId) {
+		Attendance attendanceToBeDeleted = attendanceService.deleteAttendance(employeeId);
+		HttpStatus status = HttpStatus.OK;
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("message", "Employee attendnace Deleted successfully!");
+		ResponseEntity<Attendance> response = new ResponseEntity<Attendance>(attendanceToBeDeleted, headers, status);
+		return response;
+	}
     
 }
