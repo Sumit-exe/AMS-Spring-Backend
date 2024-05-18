@@ -63,7 +63,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Employee deleteEmployee(String employeeId) {
         LOG.info(employeeId);
         Employee employeeToBeDeleted = this.getEmployeeById(employeeId);
-        employeeRepository.deleteById(employeeId);
+        employeeRepository.deleteByEmployeeId(employeeId);
         return employeeToBeDeleted;
     }
     @Override
