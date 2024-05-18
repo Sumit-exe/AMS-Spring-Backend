@@ -1,0 +1,82 @@
+[{
+  "_id": {
+    "$oid": "66448c01553ca05e81cca079"
+  },
+  "employeeId": "EMP01",
+  "employeeFullName": "John jan",
+  "employeeEmail": "john.jane@example.com",
+  "employeePhoneNo": "123-456-7840",
+  "employeeAadhar": "1234-5678-9013",
+  "employeeAvatar": "https://example.com/avatars/johndoe.jpg",
+  "employeeTeamId": "T001",
+  "employeeTeamName": "Development",
+  "employeeIsManager": true,
+  "employeeManagerId": "EMP000",
+  "employeeManagerName": "Jane Smith",
+  "employeeRole": "Software Engineer",
+  "employeeIsAdmin": false
+},
+{
+  "_id": {
+    "$oid": "664893b5c122f043216ede1f"
+  },
+  "employeeId": "EMP001",
+  "employeeFullName": "I",
+  "employeeEmail": "E",
+  "employeePhoneNo": "p",
+  "employeeTeamId": "TID025",
+  "employeeTeamName": "Development Team",
+  "employeeManagerId": "EMP024",
+  "employeeManagerName": "Ryan Green",
+  "employeeRole": "employee",
+  "employeeIsAdmin": false,
+  "_class": "com.project.attendance.model.Employee"
+},
+{
+  "_id": {
+    "$oid": "664893d1c122f043216ede20"
+  },
+  "employeeId": "EMP02",
+  "employeeFullName": "I",
+  "employeeEmail": "E",
+  "employeePhoneNo": "p",
+  "employeeTeamId": "TID025",
+  "employeeTeamName": "Development Team",
+  "employeeManagerId": "EMP024",
+  "employeeManagerName": "Ryan Green",
+  "employeeRole": "employee",
+  "employeeIsAdmin": false,
+  "_class": "com.project.attendance.model.Employee"
+},
+{
+  "_id": {
+    "$oid": "664893dac122f043216ede21"
+  },
+  "employeeId": "EMP03",
+  "employeeFullName": "I",
+  "employeeEmail": "E",
+  "employeePhoneNo": "p",
+  "employeeTeamId": "TID025",
+  "employeeTeamName": "Development Team",
+  "employeeManagerId": "EMP024",
+  "employeeManagerName": "Ryan Green",
+  "employeeRole": "employee",
+  "employeeIsAdmin": false,
+  "_class": "com.project.attendance.model.Employee"
+},
+{
+  "_id": {
+    "$oid": "664893e2c122f043216ede22"
+  },
+  "employeeId": "EMP04",
+  "employeeFullName": "II",
+  "employeeEmail": "E",
+  "employeePhoneNo": "p",
+  "employeeTeamId": "TID025",
+  "employeeTeamName": "Development Team",
+  "employeeManagerId": "EMP024",
+  "employeeManagerName": "Ryan Green",
+  "employeeRole": "employee",
+  "employeeIsAdmin": false,
+  "_class": "com.project.attendance.model.Employee"
+}]

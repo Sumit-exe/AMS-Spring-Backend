@@ -93,7 +93,7 @@ public class EmployeeController {
 		return response;
 	}
 	
-	@GetMapping("get-emp-by-mangId/{eid}")
+	@GetMapping("get-emp-by-managerId/{eid}")
 	public ResponseEntity<List<Employee>> getEmpByManagerId(@PathVariable(name = "eid") String employeeManagerId) {
 		List<Employee> empList = employeeService.getEmployeesByManagerId(employeeManagerId);
 		HttpStatus status = HttpStatus.OK;

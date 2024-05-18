@@ -11,8 +11,7 @@ public class Attendance {
     
 	@Id
 	private String allId;
-    private String empId;
-    private String counted;
+    private String employeeId;
     private List<WorkDetails> workDetails;
     
 
@@ -25,23 +24,17 @@ public class Attendance {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public String getEmpId() {
-		return empId;
+	public String getEmployeeId() {
+		return employeeId;
 	}
-	public void setEmpId(String empId) {
-		this.empId = empId;
+	public void setEmployeeId(String employeeId) {
+		this.employeeId = employeeId;
 	}
 	public List<WorkDetails> getWorkDetails() {
 		return workDetails;
 	}
 	public void setWorkDetails(List<WorkDetails> workDetails) {
 		this.workDetails = workDetails;
-	}
-	public String getCounted() {
-		return counted;
-	}
-	public void setCounted(String counted) {
-		this.counted = counted;
 	}
 
 	
