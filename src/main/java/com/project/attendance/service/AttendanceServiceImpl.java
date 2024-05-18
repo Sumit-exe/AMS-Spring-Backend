@@ -49,8 +49,6 @@ public class AttendanceServiceImpl implements AttendanceService {
         if (attendance.getEmployeeId() == null || attendance.getEmployeeId().isEmpty()) {
             throw new IllegalArgumentException("Employee ID cannot be null or empty");
         }
-
-        // Check if the attendance exists
         getEmployeeAttendanceById(attendance.getEmployeeId());
 
         return attendanceRepository.save(attendance);

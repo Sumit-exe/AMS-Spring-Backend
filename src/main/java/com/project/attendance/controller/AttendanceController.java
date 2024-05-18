@@ -48,18 +48,6 @@ public class AttendanceController {
 		return response;
 		}
 	
-  
-//    @GetMapping(path = "get-all-dates", produces = "application/json")
-//	public ResponseEntity<List<WorkDetails>> getAllEmployeesByDates() {
-//		List<WorkDetails> attList = attendanceService.getAllEmployeesByDates();
-//		HttpStatus status = HttpStatus.OK;
-//		HttpHeaders headers = new HttpHeaders();
-//		headers.add("message", "All attendances data fetched successfully!");
-//		ResponseEntity<List<WorkDetails>> response = new ResponseEntity<List<WorkDetails>>(attList, headers, status);
-//		return response;
-//		
-//    }		
-//		
 	@PostMapping(path = "add-att", produces = "application/json", consumes = "application/json")
 	public ResponseEntity<Attendance> addAtt(@RequestBody Attendance attendance){
 		Attendance attToBeAdded = attendanceService.addAttendance(attendance);
