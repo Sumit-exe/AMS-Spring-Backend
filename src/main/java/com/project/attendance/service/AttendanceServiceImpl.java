@@ -30,6 +30,7 @@ public class AttendanceServiceImpl implements AttendanceService {
             return attendanceOptional.get();
         }
     }
+    
 
     @Override
     public Attendance addAttendance(Attendance attendance) {
@@ -39,6 +40,7 @@ public class AttendanceServiceImpl implements AttendanceService {
 
         return attendanceRepository.save(attendance);
     }
+    
 
     @Override
     public Attendance updateAttendance(Attendance attendance) {
