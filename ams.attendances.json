@@ -1,59 +1,98 @@
 [{
   "_id": {
-    "$oid": "66489191c122f043216ede1a"
+    "$oid": "6649c07902aee80a66939757"
   },
-  "employeeId": "EMP002",
+  "employeeId": "EMP001",
   "workDetails": [
     {
       "date": "16-may-23",
       "workingWay": "Office",
-      "logginTime": "9:00 am",
-      "logoutTime": "5:00 pm",
-      "workHours": "8"
+      "workHours": "8",
+      "sessionTimeIn": "9:00 am",
+      "sessionTimeOut": "5:00 pm",
+      "isWorkingRemotely": false
     },
     {
       "date": "17-may-23",
       "workingWay": "Office",
-      "logginTime": "9:00 am",
-      "logoutTime": "5:00 pm",
-      "workHours": "8"
+      "workHours": "8",
+      "sessionTimeIn": "9:00 am",
+      "sessionTimeOut": "5:00 pm",
+      "isWorkingRemotely": false
     },
     {
       "date": "18-may-23",
       "workingWay": "Home",
-      "logginTime": "9:00 am",
-      "logoutTime": "5:00 pm",
-      "workHours": "8"
+      "workHours": "8",
+      "sessionTimeIn": "9:00 am",
+      "sessionTimeOut": "5:00 pm",
+      "isWorkingRemotely": false
     }
   ],
   "_class": "com.project.attendance.model.Attendance"
 },
 {
   "_id": {
-    "$oid": "664891a4c122f043216ede1b"
+    "$oid": "6649c08402aee80a66939759"
   },
-  "employeeId": "EMP003",
+  "employeeId": "EMP002",
   "workDetails": [
     {
       "date": "16-may-23",
       "workingWay": "Office",
-      "logginTime": "9:00 am",
-      "logoutTime": "5:00 pm",
-      "workHours": "8"
+      "workHours": "8",
+      "sessionTimeIn": "9:00 am",
+      "sessionTimeOut": "5:00 pm",
+      "isWorkingRemotely": false
     },
     {
       "date": "17-may-23",
       "workingWay": "Office",
-      "logginTime": "9:00 am",
-      "logoutTime": "5:00 pm",
-      "workHours": "8"
+      "workHours": "8",
+      "sessionTimeIn": "9:00 am",
+      "sessionTimeOut": "5:00 pm",
+      "isWorkingRemotely": false
     },
     {
       "date": "18-may-23",
       "workingWay": "Home",
-      "logginTime": "9:00 am",
-      "logoutTime": "5:00 pm",
-      "workHours": "8"
+      "workHours": "8",
+      "sessionTimeIn": "9:00 am",
+      "sessionTimeOut": "5:00 pm",
+      "isWorkingRemotely": false
+    }
+  ],
+  "_class": "com.project.attendance.model.Attendance"
+},
+{
+  "_id": {
+    "$oid": "6649c1515a02310aa8dd9ffc"
+  },
+  "employeeId": "EMP003",
+  "workDetails": [
+    {
+      "date": "15-may-23",
+      "workingWay": "Office",
+      "workHours": "8",
+      "sessionTimeIn": "9:00 am",
+      "sessionTimeOut": "5:00 pm",
+      "isWorkingRemotely": false
+    },
+    {
+      "date": "17-may-23",
+      "workingWay": "Office",
+      "workHours": "8",
+      "sessionTimeIn": "9:00 am",
+      "sessionTimeOut": "5:00 pm",
+      "isWorkingRemotely": false
+    },
+    {
+      "date": "19-may-23",
+      "workingWay": "Home",
+      "workHours": "8",
+      "sessionTimeIn": "9:00 am",
+      "sessionTimeOut": "5:00 pm",
+      "isWorkingRemotely": false
     }
   ],
   "_class": "com.project.attendance.model.Attendance"
