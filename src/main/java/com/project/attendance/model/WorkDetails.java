@@ -3,7 +3,6 @@ package com.project.attendance.model;
 public class WorkDetails {
 
 	private String date;
-    private String workingWay;
     private String workHours;
     private String sessionTimeIn;
     private String sessionTimeOut;
@@ -19,13 +18,13 @@ public class WorkDetails {
         this.date = date;
     }
 
-    public String getWorkingWay() {
-        return workingWay;
-    }
-
-    public void setWorkingWay(String workingWay) {
-        this.workingWay = workingWay;
-    }
+//    public String getWorkingWay() {
+//        return workingWay;
+//    }
+//
+//    public void setWorkingWay(String workingWay) {
+//        this.workingWay = workingWay;
+//    }
 
     public String getWorkHours() {
         return workHours;
@@ -60,7 +59,7 @@ public class WorkDetails {
     }
 		@Override
 		public String toString() {
-			return "WorkDetails [date=" + date + ", workingWay=" + workingWay + ", workHours=" + workHours
+			return "WorkDetails [date=" + date + ", workingWay=" +  ", workHours=" + workHours
 					+ ", sessionTimeIn=" + sessionTimeIn + ", sessionTimeOut=" + sessionTimeOut + ", isWorkingRemotely="
 					+ isWorkingRemotely + "]";
 		}

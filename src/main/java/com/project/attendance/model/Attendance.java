@@ -20,19 +20,13 @@ public class Attendance {
 
 	}
 	
-	
-
 	public String getId() {
 		return id;
 	}
-
-
-
+	
 	public void setId(String id) {
 		this.id = id;
 	}
-
-
 
 	public String getEmployeeId() {
 		return employeeId;
@@ -40,6 +34,7 @@ public class Attendance {
 	public void setEmployeeId(String employeeId) {
 		this.employeeId = employeeId;
 	}
+	
 	public List<WorkDetails> getWorkDetails() {
 		return workDetails;
 	}
