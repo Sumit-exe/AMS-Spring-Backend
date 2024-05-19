@@ -2,62 +2,73 @@ package com.project.attendance.model;
 
 public class WorkDetails {
 
-	    private String date;
-	    private String workingWay;
-	    private String logginTime;
-	    private String logoutTime;
-	    private String workHours;
-		
-	    public WorkDetails() {
-			super();
-			// TODO Auto-generated constructor stub
-		}
+	private String date;
+    private String workingWay;
+    private String workHours;
+    private String sessionTimeIn;
+    private String sessionTimeOut;
+    private boolean isWorkingRemotely;
 
-		public String getDate() {
-			return date;
-		}
+    // Getters and Setters
 
-		public void setDate(String date) {
-			this.date = date;
-		}
+    public String getDate() {
+        return date;
+    }
 
-		public String getWorkingWay() {
-			return workingWay;
-		}
+    public void setDate(String date) {
+        this.date = date;
+    }
 
-		public void setWorkingWay(String workingWay) {
-			this.workingWay = workingWay;
-		}
+    public String getWorkingWay() {
+        return workingWay;
+    }
 
-		public String getLogginTime() {
-			return logginTime;
-		}
+    public void setWorkingWay(String workingWay) {
+        this.workingWay = workingWay;
+    }
 
-		public void setLogginTime(String logginTime) {
-			this.logginTime = logginTime;
-		}
+    public String getWorkHours() {
+        return workHours;
+    }
 
-		public String getLogoutTime() {
-			return logoutTime;
-		}
+    public void setWorkHours(String workHours) {
+        this.workHours = workHours;
+    }
 
-		public void setLogoutTime(String logoutTime) {
-			this.logoutTime = logoutTime;
-		}
+    public String getSessionTimeIn() {
+        return sessionTimeIn;
+    }
 
-		public String getWorkHours() {
-			return workHours;
-		}
+    public void setSessionTimeIn(String sessionTimeIn) {
+        this.sessionTimeIn = sessionTimeIn;
+    }
 
-		public void setWorkHours(String workHours) {
-			this.workHours = workHours;
+    public String getSessionTimeOut() {
+        return sessionTimeOut;
+    }
+
+    public void setSessionTimeOut(String sessionTimeOut) {
+        this.sessionTimeOut = sessionTimeOut;
+    }
+
+    public boolean isWorkingRemotely() {
+        return isWorkingRemotely;
+    }
+
+    public void setWorkingRemotely(boolean isWorkingRemotely) {
+        this.isWorkingRemotely = isWorkingRemotely;
+    }
+		@Override
+		public String toString() {
+			return "WorkDetails [date=" + date + ", workingWay=" + workingWay + ", workHours=" + workHours
+					+ ", sessionTimeIn=" + sessionTimeIn + ", sessionTimeOut=" + sessionTimeOut + ", isWorkingRemotely="
+					+ isWorkingRemotely + "]";
 		}
+	  
+
+
+
 	    
-	    
-	    
-	    
-	    
-		
 
-	
+
 }

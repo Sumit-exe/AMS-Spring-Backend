@@ -30,6 +30,7 @@ public class AttendanceServiceImpl implements AttendanceService {
             return attendanceOptional.get();
         }
     }
+    
 
     @Override
     public Attendance addAttendance(Attendance attendance) {
@@ -39,6 +40,7 @@ public class AttendanceServiceImpl implements AttendanceService {
 
         return attendanceRepository.save(attendance);
     }
+    
 
     @Override
     public Attendance updateAttendance(Attendance attendance) {
@@ -49,8 +51,6 @@ public class AttendanceServiceImpl implements AttendanceService {
         if (attendance.getEmployeeId() == null || attendance.getEmployeeId().isEmpty()) {
             throw new IllegalArgumentException("Employee ID cannot be null or empty");
         }
-
-        // Check if the attendance exists
         getEmployeeAttendanceById(attendance.getEmployeeId());
 
         return attendanceRepository.save(attendance);

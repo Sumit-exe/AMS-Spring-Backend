@@ -12,8 +12,6 @@ public interface AttendanceService {
     
     public abstract Attendance getEmployeeAttendanceById(String attendanceId);
     
-//    public abstract List<WorkDetails> getAllEmployeesByDates();
-    
     public abstract Attendance addAttendance(Attendance attendance);
 
 	public abstract Attendance updateAttendance(Attendance attendance);

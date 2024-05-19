@@ -10,20 +10,30 @@ import java.util.List;
 public class Attendance {
     
 	@Id
-	private String allId;
+	private String id;
     private String employeeId;
     private List<WorkDetails> workDetails;
     
-
     
-    
-		
-
-	
 	public Attendance() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
+	
+	
+
+	public String getId() {
+		return id;
+	}
+
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+
+
 	public String getEmployeeId() {
 		return employeeId;
 	}
@@ -35,6 +45,13 @@ public class Attendance {
 	}
 	public void setWorkDetails(List<WorkDetails> workDetails) {
 		this.workDetails = workDetails;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Attendance [id=" + id + ", employeeId=" + employeeId + ", workDetails=" + workDetails + "]";
 	}
 
 	
