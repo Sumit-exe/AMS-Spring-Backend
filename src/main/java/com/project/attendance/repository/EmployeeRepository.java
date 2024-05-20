@@ -14,7 +14,7 @@ import com.project.attendance.model.Employee;
 	public interface EmployeeRepository extends MongoRepository<Employee, String> {
 
 	
-//		public abstract List<Employee> findByFirstName(String empName);
+
 		public abstract Optional<Employee> findByEmployeeId(String employeeId);
 		public abstract Optional<Employee> deleteByEmployeeId(String employeeId);
 		public abstract List<Employee> findByEmployeeFullName(String employeeName);

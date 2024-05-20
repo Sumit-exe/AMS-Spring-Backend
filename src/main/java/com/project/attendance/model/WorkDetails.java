@@ -7,7 +7,7 @@ public class WorkDetails {
     private String workHours;
     private String sessionTimeIn;
     private String sessionTimeOut;
-    private boolean isWorkingRemotely;
+    private Boolean isWorkingRemotely;
 
     // Getters and Setters
 
@@ -55,7 +55,7 @@ public class WorkDetails {
         return isWorkingRemotely;
     }
 
-    public void setWorkingRemotely(boolean isWorkingRemotely) {
+    public void setisWorkingRemotely(Boolean isWorkingRemotely) {
         this.isWorkingRemotely = isWorkingRemotely;
     }
 		@Override
