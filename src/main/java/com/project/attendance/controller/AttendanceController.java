@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.project.attendance.model.Attendance;
+import com.project.attendance.model.WorkDetails;
 import com.project.attendance.service.AttendanceService;
 import com.project.attendance.exception.AttendanceNotFoundException;
 
@@ -55,6 +56,15 @@ public class AttendanceController {
         HttpHeaders headers = new HttpHeaders();
         headers.add("message", "Attendance added successfully!");
         return new ResponseEntity<>(attToBeAdded, headers, HttpStatus.CREATED);
+    }
+    @PostMapping(path = "/{employeeId}/work-details")
+    public ResponseEntity<Attendance> addWorkDetails(@PathVariable String employeeId, @RequestBody WorkDetails workDetails) {
+        try {
+            Attendance updatedAttendance = attendanceService.addWorkDetails(employeeId, workDetails);
+            return new ResponseEntity<>(updatedAttendance, HttpStatus.OK);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     @PutMapping(path = "update-att/{eid}", produces = "application/json", consumes = "application/json")

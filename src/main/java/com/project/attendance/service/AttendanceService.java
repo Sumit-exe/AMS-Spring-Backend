@@ -12,7 +12,10 @@ public interface AttendanceService {
     
     public abstract Attendance getEmployeeAttendanceById(String attendanceId);
     
+
     public abstract Attendance addAttendance(Attendance attendance);
+    
+    public abstract Attendance addWorkDetails(String employeeId, WorkDetails workDetails);
 
 	public abstract Attendance updateAttendance(Attendance attendance);
 
