@@ -2,6 +2,7 @@ package com.project.attendance.service;
 
 import com.project.attendance.exception.EmployeeNotFoundException;
 import com.project.attendance.model.Attendance;
+import com.project.attendance.model.WorkDetails;
 import com.project.attendance.repository.AttendanceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,6 +42,16 @@ public class AttendanceServiceImpl implements AttendanceService {
         return attendanceRepository.save(attendance);
     }
     
+//    @Override
+//    public Attendance addWorkDetails(String employeeId, WorkDetails workDetails) {
+//        Optional<Attendance> attendance = attendanceRepository.findByEmployeeId(employeeId);
+//        if (attendance != null) {
+//            attendance.getWorkDetails().add(workDetails);
+//            return attendanceRepository.save(attendance);
+//        }
+//        return null;
+//    }
+//    
 
     @Override
     public Attendance updateAttendance(Attendance attendance) {
@@ -65,5 +76,18 @@ public class AttendanceServiceImpl implements AttendanceService {
         Attendance attendanceToBeDeleted = getEmployeeAttendanceById(attendanceId);
         attendanceRepository.deleteByEmployeeId(attendanceId);
         return attendanceToBeDeleted;
+    }
+
+	@Override
+	 public Attendance addWorkDetails(String employeeId, WorkDetails workDetails) {
+        Optional<Attendance> optionalAttendance = attendanceRepository.findByEmployeeId(employeeId);
+        if (optionalAttendance.isPresent()) {
+            Attendance attendance = optionalAttendance.get();
+            attendance.getWorkDetails().add(workDetails);
+            return attendanceRepository.save(attendance);
+        } else {
+            // Handle the case where the attendance record is not found
+            throw new RuntimeException("Attendance record not found for employee ID: " + employeeId);
+        }
     }
 }
